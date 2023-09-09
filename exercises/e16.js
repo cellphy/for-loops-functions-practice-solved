@@ -6,10 +6,19 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
-
+  let notByFlat = [];
+  for (let i = 0; i < array.length; i++) {
+    const arr = array[i];
+    if (!Array.isArray(arr)) {
+        notByFlat.push(arr);
+        continue;
+    }
+    for (let m = 0; m < arr.length; m++) {
+      notByFlat.push(arr[m]);
+    }
+  } 
+  return notByFlat;
 }
-
 
 
 // === TEST YOURSELF ===

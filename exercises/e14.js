@@ -6,12 +6,21 @@
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithWrongBalance(array) {
-  // Your code goes here...
-
-}
-
-
-
+    let maxBalance = 0;
+    let maxBalanceAccounts = [];
+    for (let i = 0; i < array.length; i++) {
+       if (array[i].balance > maxBalance){
+          maxBalance = array[i].balance;
+          maxBalanceAccounts = [];
+          maxBalanceAccounts.push(array[i]);
+       }
+       else if (array[i].balance === maxBalance){
+          maxBalanceAccounts.push(array[i]);
+       }
+    }
+    return maxBalanceAccounts;
+  }
+ 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"
 // If the test has all tests passed, switch to the next exercise file

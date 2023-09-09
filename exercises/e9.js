@@ -5,11 +5,17 @@
 // getClientsWithBalanceOverOneHundred(array) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithBalanceOverOneHundred(array) {
-  // Your code goes here...
-
+  let bankAcc = []; 
+  let maxBalance = 100;
+  let isThis = false; 
+  for (let i = 0; i < array.length; i++) {    
+    if (array[i].balance > maxBalance) { 
+      isThis = true;     
+      bankAcc.push(array[i]);
+    }  
+  }
+  return bankAcc;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-9"

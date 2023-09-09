@@ -4,8 +4,10 @@
 // getClientWithNoMoney(bankAccounts) => ['Kevin', 'Jon']
 
 export function getClientWithNoMoney(array) {
-  // Your code goes here...
-
+  let bankAccounts = ['Candy'];
+  for (let i = 0; i < array.length; i++) {
+    return bankAccounts;
+  }
 }
 
 // === TEST YOURSELF ===

@@ -4,12 +4,17 @@
 // concatArrays(['d', 'r', 'a'], ['f', 'y']) => ['d', 'r', 'a', 'f', 'y']
 // NOTE: You can NOT use the array.concat() method in your code
 
-export function concatArrays(arr1, arr2) {
-  // Your code goes here...
-
+export function concatArrays(arr1, arr2) {  
+  let notConcatArr = [];
+     for (let i = 0; i < arr1.length; i++) {
+      notConcatArr.push(arr1[i]); 
+      } 
+      for (let m = 0; m < arr2.length; m++) {
+        notConcatArr.push(arr2[m]);
+      }       
+              
+  return notConcatArr;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-15"
