@@ -5,16 +5,13 @@
 // getClientsWithBalanceOverOneHundred(array) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithBalanceOverOneHundred(array) {
-  let bankAcc = []; 
-  let maxBalance = 100;
-  let isThis = false; 
-  for (let i = 0; i < array.length; i++) {    
-    if (array[i].balance > maxBalance) { 
-      isThis = true;     
-      bankAcc.push(array[i]);
+  let userOver100 = [];   
+  for (let user of array) {    
+    if (user.balance > 100) {           
+      userOver100.push(user);
     }  
   }
-  return bankAcc;
+  return userOver100;
 }
 
 // === TEST YOURSELF ===

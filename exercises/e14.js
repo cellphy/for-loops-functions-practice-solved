@@ -5,21 +5,21 @@
 // Array example: bankAccounts in /data/data.js
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
-export function getClientsWithWrongBalance(array) {
-    let maxBalance = 0;
-    let maxBalanceAccounts = [];
-    for (let i = 0; i < array.length; i++) {
-       if (array[i].balance > maxBalance){
-          maxBalance = array[i].balance;
-          maxBalanceAccounts = [];
-          maxBalanceAccounts.push(array[i]);
-       }
-       else if (array[i].balance === maxBalance){
-          maxBalanceAccounts.push(array[i]);
-       }
-    }
-    return maxBalanceAccounts;
-  }
+ export function getClientsWithWrongBalance(array) {
+   let balances = 0;
+   let wrongBalanceArr = [];
+   for (let i = 0; i < array.length; i++) {
+      if (array[i].balance > balances){
+         balances = array[i].balance;
+         wrongBalanceArr = [];
+         wrongBalanceArr.push(array[i]);
+      }
+      else if (array[i].balance === balances){
+         wrongBalanceArr.push(array[i]);
+      }
+   }
+   return wrongBalanceArr;
+ }
  
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"

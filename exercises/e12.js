@@ -5,16 +5,19 @@
 // getAllDepositsGreaterThanOneHundred(bankAccounts) => [3432, 43242.34, 23432]
 
 export function getAllDepositsGreaterThanOneHundred(array) {  
-  let largestNum = [150, 221, 1100, 4000, 5000, 6000, 9200, 256.57];
-    for(let i = 0; i < array.length; i++) {
-     for(let z = 0; z < array[i].length; z++) {
-        if(array[i][z] > largestNum[i]) {         
-           largestNum[i] = array[i][z];
-         }
-     }
+  let userDepositGreaterThan100 = [];       
+  for (let user of array) {    
+   if (user.deposits) {
+      for (let deposit of user.deposits) {
+        if (deposit > 100) { 
+          userDepositGreaterThan100.push(deposit);
+        } 
+      }  
+    }  
   }
-  return largestNum;
+    return userDepositGreaterThan100; 
   }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"

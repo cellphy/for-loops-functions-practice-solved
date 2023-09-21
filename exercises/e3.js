@@ -1,4 +1,3 @@
-
 // EXERCISE 3
 // Make sure to solve two parts beneath
 
@@ -11,9 +10,9 @@
 export function getAverage(array) {
   let sum = 0;
   for(let i = 0; i < array.length; i++) {
-     sum += array[i];  
+     sum += array[i];       
 }
-  return sum / array.length;  
+  return sum / array.length;    
 }
 
 

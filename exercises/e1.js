@@ -6,11 +6,11 @@
 export function getFirstTenNumbers() {
   let numbers = []; 
   for (let i = 1; i <= 10; i++) {         
-      numbers.push(i);
+      numbers.push(i);         
   } 
-  return numbers;
+  return numbers; 
 }
-
+console.log(getFirstTenNumbers); 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"
 // If the test has all tests passed, switch to the next exercise file
